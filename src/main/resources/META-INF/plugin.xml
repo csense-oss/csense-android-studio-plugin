@@ -22,14 +22,25 @@
 
         <group id="csense.android.studio.plugin.MainMenu" text="_Csense" description="Csense function menu">
             <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="CsenseAndroid.ID" class="csense.android.studio.plugin.ProjectMenuActions"
-                    text="Csense - convert all layouts to databinded layout">
-                <add-to-group group-id="MainMenu"
-                              anchor="first"/>
+            <action id="CsenseAndroid.convertToDataBinding" class="csense.android.studio.plugin.ProjectMenuActions"
+                    text="Convert all layouts to databinded layout">
                 <keyboard-shortcut keymap="$default"
                                    first-keystroke="ctrl alt D"/>
             </action>
-            
+            <action id="CsenseAndroid.AddNewRender" class="csense.android.studio.plugin.views.NewRenderMenuAction"
+                    text="Add new Render (view + render file)">
+            </action>
+
+            <action id="CsenseAndroid.AddNewBindedFragment"
+                    class="csense.android.studio.plugin.views.NewFragmentMenuAction"
+                    text="Add new Databinded fragment (view + fragment)">
+            </action>
+
+            <action id="CsenseAndroid.AddNewBindedActivity"
+                    class="csense.android.studio.plugin.views.NewActivityMenuAction"
+                    text="Add new Databinded activity (view + fragment)">
+            </action>
+
         </group>
     </actions>
     <version>0.0.1</version>
