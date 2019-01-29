@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>csense.android.studio.plugin</id>
+    <name>Csense android kotlin</name>
+    <vendor email="android-csense@tvedesys.dk"
+            url="https://github.com/csense-oss/csense-android-studio-plugin">Csense oss
+    </vendor>
+
+    <description><![CDATA[
+    A plugin for working with csense android kotlin (or previously known as commonsense andorid kotlin)
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="CsenseAndroid.ID" class="csense.android.studio.plugin.ProjectMenuActions"
+                text="Csense - convert all layouts to databinded layout">
+            <add-to-group group-id="MainMenu"
+                          anchor="first"/>
+            <keyboard-shortcut keymap="$default"
+                               first-keystroke="ctrl alt D"/>
+        </action>
+    </actions>
+    <version>0.0.1</version>
+    <version>0.0.1</version>
+    <idea-version since-build="173"/>
+</idea-plugin>

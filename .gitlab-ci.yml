@@ -1,0 +1,35 @@
+image: kaiwinter/docker-java8-maven
+
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+  - chmod +x ./gradlew
+
+cache:
+  paths:
+    - .gradle/wrapper
+
+stages:
+  - build
+  - test
+  - bundle
+  - deploy
+
+build:
+  stage: build
+  script:
+    - ./gradlew assemble
+
+unitTests:
+  stage: test
+  script:
+    - ./gradlew test
+
+deploy:
+  stage: bundle
+  script:
+    - ./gradlew :buildPlugin
+  artifacts:
+    paths:
+      - build/distributions/ => plugin
+    expire_in: 1 month
