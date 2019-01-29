@@ -4,6 +4,7 @@ image: kaiwinter/docker-java8-maven
 before_script:
   - export GRADLE_USER_HOME=`pwd`/.gradle
   - chmod +x ./gradlew
+  - sudo apt-get install libgtk2.0-0:i386 libidn11:i386 libglu1-mesa:i386
 
 cache:
   paths:
