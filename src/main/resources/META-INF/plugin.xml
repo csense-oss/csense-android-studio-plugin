@@ -19,13 +19,18 @@
     </extensions>
 
     <actions>
-        <action id="CsenseAndroid.ID" class="csense.android.studio.plugin.ProjectMenuActions"
-                text="Csense - convert all layouts to databinded layout">
-            <add-to-group group-id="MainMenu"
-                          anchor="first"/>
-            <keyboard-shortcut keymap="$default"
-                               first-keystroke="ctrl alt D"/>
-        </action>
+
+        <group id="csense.android.studio.plugin.MainMenu" text="_Csense" description="Csense function menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="CsenseAndroid.ID" class="csense.android.studio.plugin.ProjectMenuActions"
+                    text="Csense - convert all layouts to databinded layout">
+                <add-to-group group-id="MainMenu"
+                              anchor="first"/>
+                <keyboard-shortcut keymap="$default"
+                                   first-keystroke="ctrl alt D"/>
+            </action>
+            
+        </group>
     </actions>
     <version>0.0.1</version>
     <version>0.0.1</version>
