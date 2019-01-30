@@ -1,5 +1,5 @@
-image: kaiwinter/docker-java8-maven
-
+#image: kaiwinter/docker-java8-maven
+image: josefcs/alpine-jdk8
 
 before_script:
   - export GRADLE_USER_HOME=`pwd`/.gradle
